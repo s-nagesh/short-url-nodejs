@@ -3,7 +3,6 @@ const User = require("../models/user");
 const { setUser } = require("../service/auth");
 
 async function handleUserSignup(req, res) {
-  console.log("req", req.body);
   const { name, email, password } = req.body;
   await User.create({
     name,
